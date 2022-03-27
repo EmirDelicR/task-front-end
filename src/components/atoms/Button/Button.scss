@@ -1,0 +1,55 @@
+@mixin button-type($background, $border, $hover) {
+  background: $background;
+  border: 1px solid $border;
+
+  &:hover {
+    background: $hover;
+  }
+}
+
+.button {
+  border-radius: 6px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  margin-top: 20px;
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+
+  &:disabled {
+    @include button-type(#bec8d1, #acb8c4, #bbc9d8);
+    opacity: 0.3;
+  }
+
+  &--primary {
+    @include button-type(#378de5, #84bbf3, #79bbff);
+  }
+
+  &--secondary {
+    @include button-type(#c62d1f, #d02718, #f24537);
+  }
+
+  &--small {
+    width: 200px;
+    height: 40px;
+  }
+
+  &--normal {
+    width: 300px;
+    padding: 12px 24px;
+    height: 50px;
+  }
+
+  &--big {
+    width: 500px;
+    padding: 18px 24px;
+    height: 60px;
+  }
+}

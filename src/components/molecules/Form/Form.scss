@@ -1,0 +1,13 @@
+.form {
+  border: 1px solid #378de5;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__error {
+    color: red;
+    padding: 10px;
+  }
+}
